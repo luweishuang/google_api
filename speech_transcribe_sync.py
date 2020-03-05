@@ -59,8 +59,9 @@ def sample_recognize(local_file_path):
     with io.open(local_file_path, "rb") as f:
         content = f.read()
     audio = {"content": content}
-
+    print("--------------------")
     response = client.recognize(config, audio)
+    print("******************")
     for result in response.results:
         # First alternative is the most probable result
         alternative = result.alternatives[0]
