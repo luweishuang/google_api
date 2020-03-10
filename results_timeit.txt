@@ -1,0 +1,43 @@
+cur_wav_file : G016_S0007.wav 
+asr_result = 主婦県楽天店長の平々凡々な生活保護ごはんの記録です 
+trans_result = Is a record of Heiheibonbon life protection rice housewife Prefecture Rakuten manager 
+---------------------------------------
+cur_wav_file : G016_S0001.wav 
+asr_result = 素敵大生の奇跡 
+trans_result = Miracle of nice college student 
+---------------------------------------
+cur_wav_file : G016_S0003.wav 
+asr_result = 主にお仕事情報をめあめあ綴ります 
+trans_result = You spelling Amer because the mainly your job information 
+---------------------------------------
+cur_wav_file : G016_S0008.wav 
+asr_result = 日本発祥の地宮崎から 
+trans_result = From Miyazaki land of Japan originated 
+---------------------------------------
+cur_wav_file : G016_S0009.wav 
+asr_result = 人間には見え難いワッフルが 
+trans_result = Human beings hardly visible to the waffle 
+---------------------------------------
+cur_wav_file : G016_S0002.wav 
+asr_result = 生活の工夫や学んだことなどについて書いています 
+trans_result = I am writing about, such as devising and learned that life 
+---------------------------------------
+cur_wav_file : G016_S0006.wav 
+asr_result = 山形県で人気の観光地や名所温泉を巡る旅ブログ 
+trans_result = Travel blog around the popular tourist destination and attractions hot springs in Yamagata Prefecture 
+---------------------------------------
+cur_wav_file : G016_S0005.wav 
+asr_result = 未来の子に会うためにこの度産み分けに挑戦します 
+trans_result = We challenge this time sex selection in order to meet the future of the child 
+---------------------------------------
+cur_wav_file : G016_S0010.wav 
+asr_result = ついつい慌ててしまいます 
+trans_result = It will be catapult panic 
+---------------------------------------
+cur_wav_file : G016_S0004.wav 
+asr_result = また多くの宗教の教えと重なる部分が多い 
+trans_result = In addition there are many parts that overlaps with the teachings of many religions 
+---------------------------------------
+asr 总耗时： 14.684239 
+trans 总耗时： 1.174741 
+总耗时： 15.859689 

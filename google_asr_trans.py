@@ -1,7 +1,7 @@
 #! -*- coding: utf-8 -*-
 import os
 from googletrans import Translator
-import datetime
+import time
 from google.cloud import speech_v1
 from google.cloud.speech_v1 import enums
 import io
@@ -40,15 +40,48 @@ translator = Translator(service_urls=[
 
 
 local_dir = "resources/japan/wav"
-starttime = datetime.datetime.now()
+
+# asr_time = 0
+# trans_time = 0
+# begin_time = time.time()
+# for cur_file in os.listdir(local_dir):
+#     cur_wav_path = os.path.join(local_dir, cur_file)
+#     if cur_wav_path.lower().endswith("wav"):
+#         starttime = time.time()
+#         asr_result = sample_recognize(cur_wav_path)
+#         asr_endtime = time.time()
+#         asr_time += float(asr_endtime - starttime)
+#         trans_result = translator.translate(asr_result, src='ja', dest='en')
+#         trans_time += float(time.time() - asr_endtime)
+#         print("cur_wav_file : %s " % cur_file)
+#         print("asr_result = %s " % asr_result)
+#         print("trans_result = %s " % trans_result.text)
+#         print("---------------------------------------")
+# print("asr 总耗时： %f " % asr_time)
+# print("trans 总耗时： %f " % trans_time)
+# endtime = time.time()
+# print("总耗时： %f " % (endtime - begin_time))
+
+
+import timeit
+
+asr_time = 0
+trans_time = 0
+begin_time = timeit.default_timer()
 for cur_file in os.listdir(local_dir):
     cur_wav_path = os.path.join(local_dir, cur_file)
     if cur_wav_path.lower().endswith("wav"):
+        starttime = timeit.default_timer()
         asr_result = sample_recognize(cur_wav_path)
+        asr_endtime = timeit.default_timer()
+        asr_time += float(asr_endtime - starttime)
         trans_result = translator.translate(asr_result, src='ja', dest='en')
+        trans_time += float(timeit.default_timer() - asr_endtime)
         print("cur_wav_file : %s " % cur_file)
         print("asr_result = %s " % asr_result)
         print("trans_result = %s " % trans_result.text)
         print("---------------------------------------")
-endtime = datetime.datetime.now()
-print(endtime - starttime)
+print("asr 总耗时： %f " % asr_time)
+print("trans 总耗时： %f " % trans_time)
+endtime = timeit.default_timer()
+print("总耗时： %f " % (endtime - begin_time))
